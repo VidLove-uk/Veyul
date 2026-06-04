@@ -364,8 +364,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 },{ threshold:0.7 });
 
-document.querySelectorAll(".live-screen").forEach(feed=>{
-    observer.observe(feed);
+document.querySelectorAll(".live-screen").forEach((screen) => {
+
+    screen.addEventListener("click", () => {
+        goLink();
+    });
+
 });
 
 document.querySelectorAll(".feed-video").forEach((video) => {
