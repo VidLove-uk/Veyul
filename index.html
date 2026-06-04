@@ -366,7 +366,7 @@ document.querySelectorAll(".live-screen").forEach(feed=>{
     observer.observe(feed);
 });
 
-document.querySelectorAll(".feed-video").forEach(video => {
+document.querySelectorAll(".feed-video").forEach(video, index) => {
 
     video.addEventListener("click", () => {
 
