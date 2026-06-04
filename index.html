@@ -29,21 +29,23 @@ body{
     scroll-snap-align:start;  
 }  
   
-.feed-video{  
-    width:100%;  
-    height:100%;  
-    object-fit:cover;  
-}  
-  
-.overlay{  
-    position:absolute;  
-    inset:0;  
-    background:linear-gradient(  
-        to top,  
-        rgba(0,0,0,.7),  
-        rgba(0,0,0,.1),  
-        rgba(0,0,0,.3)  
-    );  
+  .feed-video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    pointer-events: auto;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.1),
+        rgba(0,0,0,.3)
+    );
+    pointer-events: none;
 }  
   
 .top-info{  
@@ -164,7 +166,7 @@ body{
 <section class="live-screen">
 
     <video class="feed-video"
-        src="as1.mp4"
+        src="yu1.mp4"
         autoplay
         muted
         loop
@@ -208,7 +210,7 @@ body{
 <section class="live-screen">
 
     <video class="feed-video"
-        src="as2.mp4"
+        src="yu2.mp4"
         autoplay
         muted
         loop
@@ -252,7 +254,7 @@ body{
 <section class="live-screen">
 
     <video class="feed-video"
-        src="as3.mp4"
+        src="yu3.mp4"
         autoplay
         muted
         loop
@@ -296,7 +298,7 @@ body{
 <section class="live-screen">
 
     <video class="feed-video"
-        src="as4.mp4"
+        src="yu4.mp4"
         autoplay
         muted
         loop
@@ -339,15 +341,15 @@ body{
 
 <script>  
 const feeds = [  
-    "as1.mp4",
-    "as2.mp4",
-    "as3.mp4",
-    "as4.mp4",
-    "as5.mp4",  
-    "as6.mp4",  
-    "as7.mp4",  
-    "as8.mp4",  
-    "as9.mp4"  
+    "yu1.mp4",
+    "yu2.mp4",
+    "yu3.mp4",
+    "yu4.mp4",
+    "yu5.mp4",  
+    "yu6.mp4",  
+    "yu7.mp4",  
+    "yu8.mp4",  
+    "yu9.mp4"  
 ];  
   
 const observer = new IntersectionObserver((entries) => {
@@ -366,22 +368,10 @@ document.querySelectorAll(".live-screen").forEach(feed=>{
     observer.observe(feed);
 });
 
-document.querySelectorAll(".feed-video").forEach(video, index) => {
+document.querySelectorAll(".feed-video").forEach((video) => {
 
     video.addEventListener("click", () => {
-
-        let current = feeds.indexOf(video.getAttribute("src"));
-
-        current++;
-
-        if(current >= feeds.length){
-            current = 0;
-        }
-
-        video.src = feeds[current];
-        video.load();
-        video.play();
-
+        goLink();
     });
 
 });
