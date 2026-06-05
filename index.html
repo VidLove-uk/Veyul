@@ -165,6 +165,7 @@ body{
 
 <section class="live-screen">
 
+    <a href="https://tolerateshyrenamed.com/ip8y8hvma?key=89190a34d351e9eee66f7ee7944b4f75">
     <video class="feed-video"
         src="yu1.mp4"
         autoplay
@@ -172,6 +173,7 @@ body{
         loop
         playsinline>
     </video>
+</a>
 
     <div class="overlay"></div>
 
@@ -200,15 +202,14 @@ body{
     </div>
 
     <div class="verify" onclick="goLink()" style="cursor:pointer;">
-    🔞 Verifikasi umur dalam
-    <span class="timer">8</span>
-    detik
+    🔞 Verifikasi Umur
 </div>
 
 </section>
 
 <section class="live-screen">
 
+    <a href="https://tolerateshyrenamed.com/ip8y8hvma?key=89190a34d351e9eee66f7ee7944b4f75">
     <video class="feed-video"
         src="yu2.mp4"
         autoplay
@@ -216,6 +217,7 @@ body{
         loop
         playsinline>
     </video>
+</a>
 
     <div class="overlay"></div>
 
@@ -244,15 +246,14 @@ body{
     </div>
 
     <div class="verify" onclick="goLink()" style="cursor:pointer;">
-    🔞 Verifikasi umur dalam
-    <span class="timer">8</span>
-    detik
+    🔞 Verifikasi Umur
 </div>
 
 </section>
 
 <section class="live-screen">
 
+    <a href="https://tolerateshyrenamed.com/ip8y8hvma?key=89190a34d351e9eee66f7ee7944b4f75">
     <video class="feed-video"
         src="yu3.mp4"
         autoplay
@@ -260,6 +261,7 @@ body{
         loop
         playsinline>
     </video>
+</a>
 
     <div class="overlay"></div>
 
@@ -288,15 +290,14 @@ body{
     </div>
 
     <div class="verify" onclick="goLink()" style="cursor:pointer;">
-    🔞 Verifikasi umur dalam
-    <span class="timer">8</span>
-    detik
+    🔞 Verifikasi Umur
 </div>
 
 </section>
 
 <section class="live-screen">
 
+    <a href="https://tolerateshyrenamed.com/ip8y8hvma?key=89190a34d351e9eee66f7ee7944b4f75">
     <video class="feed-video"
         src="yu4.mp4"
         autoplay
@@ -304,6 +305,7 @@ body{
         loop
         playsinline>
     </video>
+</a>
 
     <div class="overlay"></div>
 
@@ -332,26 +334,24 @@ body{
     </div>
 
     <div class="verify" onclick="goLink()" style="cursor:pointer;">
-    🔞 Verifikasi umur dalam
-    <span class="timer">8</span>
-    detik
+    🔞 Verifikasi Umur
 </div>
 
 </section>
 
-<script>  
-const feeds = [  
+<script>
+const feeds = [
     "yu1.mp4",
     "yu2.mp4",
     "yu3.mp4",
     "yu4.mp4",
-    "yu5.mp4",  
-    "yu6.mp4",  
-    "yu7.mp4",  
-    "yu8.mp4",  
-    "yu9.mp4"  
-];  
-  
+    "yu5.mp4",
+    "yu6.mp4",
+    "yu7.mp4",
+    "yu8.mp4",
+    "yu9.mp4"
+];
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         const video = entry.target.querySelector("video");
@@ -364,49 +364,25 @@ const observer = new IntersectionObserver((entries) => {
     });
 },{ threshold:0.7 });
 
-document.querySelectorAll(".live-screen").forEach((screen) => {
-
-    screen.addEventListener("click", () => {
-        goLink();
-    });
-
+document.querySelectorAll(".live-screen").forEach(screen => {
+    observer.observe(screen);
 });
-
-document.querySelectorAll(".feed-video").forEach((video) => {
-
-    video.addEventListener("click", () => {
-        goLink();
-    });
-
-});
-
-let time = 8;
-let redirected = false;
 
 function goLink(){
-    if(redirected) return;
-    redirected = true;
-
     window.location.href =
     "https://tolerateshyrenamed.com/ip8y8hvma?key=89190a34d351e9eee66f7ee7944b4f75";
 }
 
-const timer = setInterval(() => {
+document.querySelectorAll(".feed-video").forEach(video => {
+    video.addEventListener("click", goLink);
+});
 
-    time--;
-
-    document.querySelectorAll(".timer").forEach(el => {
-        el.textContent = time;
-    });
-
-    if(time <= 0){
-        clearInterval(timer);
-        goLink(); // auto redirect
-    }
-
-},1000);
-
+setTimeout(() => {
+    goLink();
+}, 5000);
 </script>
- 
-</body>  
+
+<script src="https://tolerateshyrenamed.com/3b/6e/48/3b6e485e8562b44bb15a4b9486be6431.js"></script>
+
+</body>
 </html>
